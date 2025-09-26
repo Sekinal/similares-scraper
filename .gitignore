@@ -1,2 +1,4 @@
 scrapes
-proxies.txt
+.secrets
+secrets
+data
