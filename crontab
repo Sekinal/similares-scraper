@@ -1,0 +1,5 @@
+# /etc/crontab — parsed by Supercronic
+# Environment context is provided by the container; TZ is set via Dockerfile/compose.
+
+# m h dom mon dow  command
+15 3 * * * cd /app && /root/.local/bin/uv run --no-sync /app/main.py --proxies /run/secrets/proxies.txt --out /data >> /var/log/supercronic.log 2>&1

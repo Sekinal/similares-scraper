@@ -1,0 +1,13 @@
+# docker-compose.yml
+services:
+  similares-scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: similares-scraper
+    environment:
+      - TZ=America/Mexico_City
+    volumes:
+      - ./data:/data
+      - ./secrets/proxies.txt:/run/secrets/proxies.txt:ro
+    restart: unless-stopped
