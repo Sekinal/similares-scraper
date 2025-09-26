@@ -9,5 +9,5 @@ services:
       - TZ=America/Mexico_City
     volumes:
       - ./data:/data
-      - ./secrets/proxies.txt:/run/secrets/proxies.txt:ro
+      - ./.secrets/proxies.txt:/run/secrets/proxies.txt:ro
     restart: unless-stopped
